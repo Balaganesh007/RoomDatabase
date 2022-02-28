@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/RoomDatabase/app/src/main/res/font/roboto.xml" value="0.18055555555555555" />
+        <entry key="..\:/Users/RoomDatabase/app/src/main/res/font/roboto_bold.xml" value="0.18055555555555555" />
         <entry key="..\:/Users/RoomDatabase/app/src/main/res/layout/activity_main.xml" value="0.10144927536231885" />
+        <entry key="..\:/Users/RoomDatabase/app/src/main/res/layout/display_recycular_view.xml" value="0.13541666666666666" />
         <entry key="..\:/Users/RoomDatabase/app/src/main/res/layout/fragment_add_data.xml" value="0.10144927536231885" />
         <entry key="..\:/Users/RoomDatabase/app/src/main/res/layout/fragment_display.xml" value="0.125" />
+        <entry key="..\:/Users/RoomDatabase/app/src/main/res/layout/text_view_holder.xml" value="0.13541666666666666" />
       </map>
     </option>
   </component>

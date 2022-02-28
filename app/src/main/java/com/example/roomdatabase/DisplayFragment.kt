@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
+import com.example.roomdatabase.adapter.DataAdapter
 import com.example.roomdatabase.database.StoreNameDataBase
 import com.example.roomdatabase.databinding.FragmentDisplayBinding
 
@@ -32,12 +34,23 @@ class DisplayFragment : Fragment() {
 
         viewModel = ViewModelProvider(this,viewModelFactory).get(DisplayViewModel::class.java)
 
-        viewModel.allname?.observe(this, Observer {
-            binding.displayTextView.text = viewModel.allname?.value.toString()
-        })
+//        viewModel.allname?.observe(this, Observer {
+//            binding.displayTextView.text = viewModel.allname?.value.toString()
+//        })
         binding.ClearDataButton.setOnClickListener {
             viewModel.onClear()
         }
+        val manager = GridLayoutManager(activity, 2)
+        binding.namesList.layoutManager = manager
+        val adapter = DataAdapter()
+
+        binding.namesList.adapter = adapter
+        viewModel.allname?.observe(viewLifecycleOwner, Observer {
+            it?.let {
+                adapter.submitList(it)
+            }
+        })
+
 //        binding.ShowDataButton.setOnClickListener {
 //            viewModel.getData()
 //        }
